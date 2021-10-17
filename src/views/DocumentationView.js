@@ -4,12 +4,15 @@ import DocumentComponent from "../components/documentation/DocumentComponent";
 import StopWatchButtons from "../components/generic/StopWatchButtons";
 import { StopWatchTimerDisplay } from "../components/generic/TimerDisplay";
 //import Button from "../components/generic/Button";
-import TimersView from "./TimersView";
+//import TimersView from "./TimersView";
+import Button from "../components/generic/Button";
 
 const Container = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
+  //------------------------------
+  
 `;
 
 const Title = styled.div`
@@ -18,7 +21,10 @@ const Title = styled.div`
 const smallComponent = styled.div`
   //font-size: 2rem;
   width: 20px;
-  border: 5px solid blue;
+  borderRadius: "20%";
+  border-style: outset;
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.16), 0 4px 6px rgba(0, 0, 0, 0.45);
+  //border: 5px solid blue;
 `;
 
 class Documentation extends React.Component {
@@ -28,14 +34,14 @@ class Documentation extends React.Component {
         <div>
           <Title>Documentation</Title>
           <DocumentComponent
-            title="Different Types Timer"
-            component={<div style={this.smallComponent}><TimersView /></div>}
+            title="StopWatch Types Tabatab"
+            component={<div style={this.smallComponent}>{<Button text={"Tabata"} />}</div>}
             propDocs={[
               {
-                prop: "Button",
-                description: "Display Default screen",
+                prop: "text",
+                description: "Stop watch type 'Tabata",
                 type: "Buttons",
-                defaultValue: "Display Default screen"
+                defaultValue: "Stop watch Tabata"
               }
             ]}
           />
@@ -63,8 +69,6 @@ class Documentation extends React.Component {
               }
             ]}
           />
-
-
         </div>
       </Container>
     );
