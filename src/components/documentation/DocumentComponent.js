@@ -53,7 +53,9 @@ class DocumentComponent extends React.Component {
                 </tr>
               );
             })}
+
           </Documentation>
+
         </Container>
       </Wrapper>
     );

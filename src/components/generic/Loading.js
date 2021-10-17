@@ -7,7 +7,7 @@ const primaryColor = "#ffa2bf";
 const sizeMapping = {
   small: 10,
   medium: 14,
-  large: 20,
+  large: 20
 };
 
 const Container = styled.div`
@@ -78,12 +78,12 @@ class Loading extends React.Component {
 
 Loading.propTypes = {
   size: PropTypes.oneOf(["small", "medium", "large"]),
-  color: PropTypes.string,
+  color: PropTypes.string
 };
 
 Loading.defaultProps = {
   size: "medium",
-  color: primaryColor,
+  color: primaryColor
 };
 
 export default Loading;
