@@ -23,6 +23,11 @@ const RenderComponent = styled.div`
   padding: 25px;
   display: flex;
   align-items: center;
+  //-------------------------
+  //font-size:10px;
+  //width:20px;
+  //padding-right: 10px;
+  //justify-content: space-between;
 `;
 
 const Documentation = styled.table``;
@@ -53,9 +58,7 @@ class DocumentComponent extends React.Component {
                 </tr>
               );
             })}
-
           </Documentation>
-
         </Container>
       </Wrapper>
     );

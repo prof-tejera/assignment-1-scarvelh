@@ -80,6 +80,5 @@ StopWatchButtons.propTypes = {
   style: PropTypes.object,
   onClick: PropTypes.func,
   props: PropTypes.object
-
 };
 export default StopWatchButtons;

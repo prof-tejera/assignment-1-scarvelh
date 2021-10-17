@@ -22,7 +22,8 @@ const Container = styled.div`
 `;
 // align text in a grid
 const AlignGrid = {
-  margin: "30px"
+  margin: "30px",
+  alignItems: "center"
 };
 
 class TimersView extends Component {
@@ -49,7 +50,7 @@ class TimersView extends Component {
     { title: "Stopwatch", C: <Stopwatch />, customStyling: { backgroundColor: "#add8e6", alignItems: "center" } },
     { title: "Countdown", C: <Countdown />, customStyling: { backgroundColor: "#ffffe0", alignItems: "center" } },
     { title: "XY", C: <XY />, customStyling: { backgroundColor: "#20b2aa", alignItems: "center" } },
-    { title: "Tabata", C: <Tabata />, customStyling: { backgroundColor: "#FF7F7F", alignItems: "center" } }
+    { title: "Tabata", C: <Tabata />, customStyling: { backgroundColor: "#FF7F7F", alignItems: "center",justifyItems: "center" } }
   ];
 
   render() {
