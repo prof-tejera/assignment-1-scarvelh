@@ -78,7 +78,8 @@ class StopWatchButtons extends React.Component {
 StopWatchButtons.propTypes = {
   text: PropTypes.string,
   style: PropTypes.object,
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
+  props: PropTypes.object
 
 };
 export default StopWatchButtons;
