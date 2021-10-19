@@ -5,20 +5,13 @@ import styled from "styled-components";
 import { customStyleInput } from "./Countdown";
 
 const Container = styled.div`
-  //width: 200px;
   width: auto;
-  //height: 300px;
   height: auto;
-  background-color: #FF7F7F;
-  //display: inline-block;
-   display: flex;
+  display: flex;
   padding: 20px;
-  //border: 1px solid black;
   border-radius: 20%;
   align-items: center;
-  //margin: 50px;
   padding-left: 50px;
-  //margin-left: 20px;
   animation: shake 0.8s;
   @keyframes shake {
     0% {
@@ -34,7 +27,7 @@ const Container = styled.div`
     100% {
       transform: translateX(0px);
     }
-    
+
   };
   border-style: outset;
   box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.16), 0 4px 6px rgba(0, 0, 0, 0.45);
@@ -42,6 +35,7 @@ const Container = styled.div`
   flex-direction: column; /* make main-axis vertical */
   justify-content: center; /* align items vertically, in this case */
 `;
+
 const ButtonPosition = {
   /* The size of the buttons passed */
   fontSize: "20px",
@@ -121,42 +115,43 @@ class Tabata extends React.Component {
 
 
   };
+
   render() {
     const { hours, minutes, seconds } = this.state;
     return (
-      <Container>
+      <Container style={this.props.style}>
 
         <div style={{ float: "left" }}>
-          <StopWatchTimerDisplay hrs={hours} mins={minutes} secs={seconds}/>
+          <StopWatchTimerDisplay hrs={hours} mins={minutes} secs={seconds} />
         </div>
         <div style={{ display: "flex" }}>
           <div style={AlignGrid}>
             <p>Timer 1 (Hours)</p>
             <input ref={this.hoursInput} type="number" placeholder={0} name="hours" onChange={this.inputHandler}
-                   min="0" style={customStyleInput}/>
+                   min="0" style={customStyleInput} />
             <p>Timer 1 (Minutes)</p>
             <input ref={this.minutesInput} type="number" placeholder={0} name="minutes" onChange={this.inputHandler}
-                   min="0" style={customStyleInput}/>
+                   min="0" style={customStyleInput} />
             <p>Timer 1 (Seconds)</p>
             <input ref={this.secondsInput} type="number" placeholder={0} name="seconds" onChange={this.inputHandler}
-                   min="0" style={customStyleInput}/>
+                   min="0" style={customStyleInput} />
           </div>
           <div style={AlignGrid}>
             <p>Timer 2 (Rest Hours)</p>
             <input ref={this.hoursInput} type="number" placeholder={0} name="hours" onChange={this.inputHandler}
-                   min="0" style={customStyleInput}/>
+                   min="0" style={customStyleInput} />
             <p>Timer 2 (Rest Minutes)</p>
             <input ref={this.minutesInput} type="number" placeholder={0} name="minutes" onChange={this.inputHandler}
-                   min="0" style={customStyleInput}/>
+                   min="0" style={customStyleInput} />
             <p>Timer 2 (Rest Seconds)</p>
             <input ref={this.secondsInput} type="number" placeholder={0} name="seconds" onChange={this.inputHandler}
-                   min="0" style={customStyleInput}/>
+                   min="0" style={customStyleInput} />
           </div>
 
           <div style={AlignGrid}>
             <p>Repeat number of Times</p>
             <input ref={this.secondsInput} type="number" placeholder={0} name="numTimes" onChange={this.inputHandler}
-                   min="0" style={customStyleInput}/>
+                   min="0" style={customStyleInput} />
           </div>
         </div>
         <div style={ButtonPosition}>

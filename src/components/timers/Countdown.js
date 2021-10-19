@@ -1,42 +1,8 @@
 import React from "react";
-import styled from "styled-components";
 import { StopWatchTimerDisplay } from "../generic/TimerDisplay";
 import StopWatchButtons from "../generic/StopWatchButtons";
-import { getIntervalTimer } from "../../utils/helpers";
+import { Container, getIntervalTimer } from "../../utils/helpers";
 
-const Container = styled.div`
-  //width: 280px;
-  width: auto;
-  height: auto;
-  background-color: #ffffe0;
-  display: inline-block;
-  //padding: 20px;
-  border-radius: 20%;
-  align-items: center;
-  //padding-
-  padding-bottom: 30px;
-  padding-left: 40px;
-  padding-right: 20px;
-  // justify-items: center;
-  animation: shake 1s;
-  @keyframes shake {
-    0% {
-      transform: translateX(0)
-    }
-    25% {
-      transform: translateX(25px);
-    }
-
-    50% {
-      transform: translateX(-25px);
-    }
-    100% {
-      transform: translateX(0px);
-    }
-  };
-  border-style: outset;
-  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.16), 0 4px 6px rgba(0, 0, 0, 0.45);
-`;
 
 const ButtonPosition = {
   /* The size of the buttons passed */
@@ -130,7 +96,7 @@ class Countdown extends React.Component {
   render() {
     const { hours, minutes, seconds } = this.state;
     return (
-      <Container>
+      <Container style={this.props.style}>
         <StopWatchTimerDisplay hrs={hours} mins={minutes} secs={seconds} />
 
         <p>(Hours)</p>

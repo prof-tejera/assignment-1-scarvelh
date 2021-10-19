@@ -62,21 +62,21 @@ class TimersView extends Component {
 
     switch (this.state.timerTypeValues) {
       case "Stopwatch":
-        selectedTimerType = <Stopwatch />;
+        selectedTimerType = <Stopwatch style={this.timers[0].customStyling}/>;
         break;
       case "Countdown":
-        selectedTimerType = <Countdown />;
+        selectedTimerType = <Countdown style={this.timers[1].customStyling}/>;
         break;
       case "XY":
-        selectedTimerType = <XY />;
+        selectedTimerType = <XY style={this.timers[2].customStyling} />;
         break;
       case "Tabata":
-        selectedTimerType = <Tabata />;
+        selectedTimerType = <Tabata style={this.timers[3].customStyling}/>;
         break;
 
       default:
 
-        selectedTimerType = <Stopwatch />;
+        selectedTimerType = <Stopwatch style={this.timers[0].customStyling}/>;
     }
 
 

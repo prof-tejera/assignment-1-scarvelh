@@ -3,8 +3,6 @@ import styled from "styled-components";
 import DocumentComponent from "../components/documentation/DocumentComponent";
 import StopWatchButtons from "../components/generic/StopWatchButtons";
 import { StopWatchTimerDisplay } from "../components/generic/TimerDisplay";
-//import Button from "../components/generic/Button";
-//import TimersView from "./TimersView";
 import Button from "../components/generic/Button";
 
 const Container = styled.div`
@@ -12,19 +10,21 @@ const Container = styled.div`
   justify-content: center;
   width: 100%;
   //------------------------------
-  
+
 `;
 
 const Title = styled.div`
   font-size: 2rem;
 `;
-const smallComponent = styled.div`
+const DisableComponent = styled.div`
   //font-size: 2rem;
-  width: 20px;
-  borderRadius: "20%";
+  width: auto;
+  border-radius: 20%;
   border-style: outset;
   box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.16), 0 4px 6px rgba(0, 0, 0, 0.45);
-  //border: 5px solid blue;
+
+  // turn off point to disable
+  pointer-events: none;
 `;
 
 class Documentation extends React.Component {
@@ -35,19 +35,19 @@ class Documentation extends React.Component {
           <Title>Documentation</Title>
           <DocumentComponent
             title="StopWatch Types Tabatab"
-            component={<div style={this.smallComponent}>{<Button text={"Tabata"} />}</div>}
+            component={<DisableComponent>{<Button text={"Tabata"} />}</DisableComponent>}
             propDocs={[
               {
                 prop: "text",
                 description: "Stop watch type 'Tabata",
                 type: "Buttons",
-                defaultValue: "Stop watch Tabata"
+                defaultValue: "Stop watch type Tabata"
               }
             ]}
           />
           <DocumentComponent
             title="Stop Watch Buttons"
-            component={<div style={this.smallComponent}><StopWatchButtons /></div>}
+            component={<DisableComponent><StopWatchButtons /></DisableComponent>}
             propDocs={[
               {
                 prop: "Button",
@@ -59,13 +59,26 @@ class Documentation extends React.Component {
           />
           <DocumentComponent
             title="Stop Watch Display"
-            component={<div style={this.smallComponent}><StopWatchTimerDisplay hrs={"00"} mins={"00"} secs={"00"}/></div>}
+            component={<DisableComponent><StopWatchTimerDisplay hrs={"00"} mins={"00"}
+                                                                secs={"00"} /></DisableComponent>}
             propDocs={[
               {
                 prop: "hrs:mins:secs",
                 description: "Show the stop watch  numbers",
                 type: "string",
                 defaultValue: "hrs:mins:secs"
+              }
+            ]}
+          />
+          <DocumentComponent
+            title="Input field 'hours' minutes' 'seconds'"
+            component={<DisableComponent><input type="number" min="0" placeholder={0} /></DisableComponent>}
+            propDocs={[
+              {
+                prop: "type,min,placeholder",
+                description: "Data entry field",
+                type: "number",
+                defaultValue: "0"
               }
             ]}
           />
