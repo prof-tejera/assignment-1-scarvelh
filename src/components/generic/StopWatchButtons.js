@@ -3,6 +3,7 @@ import Button from "./Button";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
+
 const Container = styled.div`
   //   background-color: lightgrey;
   align-items: center;
@@ -31,16 +32,18 @@ class StopWatchButtons extends React.Component {
     alignItems: "center",
     //border: ".1rem red solid",
     borderRadius: "20%",
-    float: "top"
+    float: "top",
+    disabled:false,
   };
 
   handleStart = () => {
-
+    this.setState({disabled:true});
 
     this.props.parentCallback("startButton");
 
     console.log("Button Start have been clicked");
     this.setState({ backgroundColor: "green" });
+
   };
   handleStop = () => {
     console.log("Button Stop have been clicked");
@@ -50,6 +53,7 @@ class StopWatchButtons extends React.Component {
   handleReset = () => {
     console.log("Button Reset have been clicked");
     this.props.parentCallback("resetButton");
+    this.setState({ backgroundColor: "#6488ea" });
   };
 
 
@@ -61,7 +65,7 @@ class StopWatchButtons extends React.Component {
           <Button text={"Start"} onClick={() => {
 
             this.handleStart();
-          }} style={this.props.style} />
+          } } style={this.props.style} disabled={this.state.disabled}/>
           <Button text="Stop" onClick={() => {
             this.handleStop();
           }} style={this.state} />

@@ -34,13 +34,13 @@ class Documentation extends React.Component {
         <div>
           <Title>Documentation</Title>
           <DocumentComponent
-            title="StopWatch Types Tabatab"
+            title="StopWatch Types Tabata"
             component={<DisableComponent>{<Button text={"Tabata"} />}</DisableComponent>}
             propDocs={[
               {
                 prop: "text",
                 description: "Stop watch type 'Tabata",
-                type: "Buttons",
+                type: "string",
                 defaultValue: "Stop watch type Tabata"
               }
             ]}
@@ -50,7 +50,7 @@ class Documentation extends React.Component {
             component={<DisableComponent><StopWatchButtons /></DisableComponent>}
             propDocs={[
               {
-                prop: "Button",
+                prop: "text",
                 description: "Display 'Start' 'Stop','Reset'",
                 type: "string",
                 defaultValue: "'Start' 'Stop','Reset'"
@@ -64,7 +64,7 @@ class Documentation extends React.Component {
             propDocs={[
               {
                 prop: "hrs:mins:secs",
-                description: "Show the stop watch  numbers",
+                description: "Show the stop watch display 00:00:00",
                 type: "string",
                 defaultValue: "hrs:mins:secs"
               }
@@ -75,12 +75,39 @@ class Documentation extends React.Component {
             component={<DisableComponent><input type="number" min="0" placeholder={0} /></DisableComponent>}
             propDocs={[
               {
-                prop: "type,min,placeholder",
-                description: "Data entry field",
+                prop: "type",
+                description: "What type of field is the html input field",
                 type: "number",
                 defaultValue: "0"
               }
             ]}
+
+          />
+          <DocumentComponent
+            title="Input field 'hours' minutes' 'seconds'"
+            component={<DisableComponent><input type="number" min="0" placeholder={0} /></DisableComponent>}
+            propDocs={[
+              {
+                prop: "min",
+                description: "Make sure that you cannot use up and down arrow and enter minus values",
+                type: "string",
+                defaultValue: "0"
+              }
+            ]}
+
+          />
+          <DocumentComponent
+            title="Input field 'hours' minutes' 'seconds'"
+            component={<DisableComponent><input type="number" min="0" placeholder={0} /></DisableComponent>}
+            propDocs={[
+              {
+                prop: "placeholder",
+                description: "Default value for input string",
+                type: "number",
+                defaultValue: "0"
+              }
+            ]}
+
           />
         </div>
       </Container>

@@ -23,7 +23,7 @@ class Button extends Component {
 
 
     return (
-    <Container onClick={() => this.props.onClick(this.props.value)} text={this.props.text} style={this.props.style} >
+    <Container onClick={() => this.props.onClick(this.props.value)} text={this.props.text} style={this.props.style} disabled={this.props.disabled} >
       {this.props.value}
       {this.props.text}
     </Container>

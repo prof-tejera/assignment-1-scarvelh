@@ -7,11 +7,9 @@ import { Container, getIntervalTimer } from "../../utils/helpers";
 const ButtonPosition = {
   /* The size of the buttons passed */
   fontSize: "20px",
-
   borderRadius: "20%"
 
 };
-
 
 class Stopwatch extends React.Component {
   constructor() {
