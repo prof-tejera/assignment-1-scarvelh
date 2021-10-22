@@ -40,6 +40,7 @@ class Stopwatch extends React.Component {
           minutes: 0,
           seconds: 0
         });
+        ;
         clearInterval(this.stopWatchtimer);
         break;
       default:

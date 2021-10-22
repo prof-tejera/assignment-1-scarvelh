@@ -67,6 +67,9 @@ class Countdown extends React.Component {
           minutes: 0,
           seconds: 0
         });
+        this.hoursInput.current.value = 0;
+        this.minutesInput.current.value = 0;
+        this.secondsInput.current.value = 0;
         clearInterval(this.countDownTimer);
         break;
       default:
