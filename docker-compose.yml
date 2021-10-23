@@ -1,0 +1,16 @@
+version: '3.3'
+
+services:
+
+  homework4-app:
+    container_name: homework4-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
+    ports:
+      - 3000:3000
+    environment:
+      - CHOKIDAR_USEPOLLING=true
