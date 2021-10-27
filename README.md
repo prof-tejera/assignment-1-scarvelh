@@ -60,4 +60,4 @@ Run project
 npm start
 ```
 
-Assembled timers: `localhost:3000`. Documentation: `localhost:3000/docs`
+Assembled timers: `http://74.208.183.29:3001`. Documentation: `http://74.208.183.29:3001/docs`
