@@ -59,6 +59,7 @@ Run project
 ```
 npm start
 ```
-PLEASE NOTE THE APP is hosted on the URL(http://74.208.183.29:3001) below
+PLEASE NOTE THE APP is hosted on the URL(http://74.208.183.29:3001) below. The code is available for checkout and test. The
+application is available for test on the URL below.
 
 Assembled timers: `http://74.208.183.29:3001`. Documentation: `http://74.208.183.29:3001/docs`

@@ -87,7 +87,9 @@ class Countdown extends React.Component {
       this.setState({ minutes: this.state.minutes - 1 });
     }
     if (minutes === 0 && hours !== 0) {
-      this.setState({ hours: this.state.hours - 1 });
+      if (hours !== 0) {
+        this.setState({ hours: this.state.hours - 1 });
+      }
       this.setState({ minutes: 59 });
     }
     //when the clock have reach "00:00:00" clear the interval timer
