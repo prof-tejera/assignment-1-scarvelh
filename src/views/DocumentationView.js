@@ -78,7 +78,7 @@ class Documentation extends React.Component {
                 prop: "type",
                 description: "What type of field is the html input field",
                 type: "number",
-                defaultValue: "0"
+                defaultValue: "number"
               }
             ]}
 
@@ -103,7 +103,7 @@ class Documentation extends React.Component {
               {
                 prop: "placeholder",
                 description: "Default value for input string",
-                type: "number",
+                type: "string",
                 defaultValue: "0"
               }
             ]}
